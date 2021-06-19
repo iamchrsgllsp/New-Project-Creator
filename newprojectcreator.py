@@ -26,4 +26,11 @@ def files():
             create_project(newpath, project_name)
             print(f"New project started {newpath}")
 
-files()
+def os_check():
+    if os.name == "nt":
+        print("Windows machine")
+        files()
+    else:
+        print("Sorry, Currently unsupported OS")
+
+os_check()
