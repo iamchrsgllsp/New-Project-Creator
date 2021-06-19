@@ -25,6 +25,9 @@ def files():
             print("Filepath doesn't exist")
             create_project(newpath, project_name)
             print(f"New project started {newpath}")
+    else:
+        print("Not a valid Windows filepath")
+        files()
 
 def os_check():
     if os.name == "nt":
